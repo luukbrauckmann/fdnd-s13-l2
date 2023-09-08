@@ -1,0 +1,32 @@
+{
+  "id": "squad",
+  "label": "Squad",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "members": {
+        "type": "Link",
+        "config": {
+          "label": "Members",
+          "select": "document",
+          "customtypes": ["member"]
+        }
+      }
+    }
+  }
+}

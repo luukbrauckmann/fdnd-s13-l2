@@ -1,0 +1,55 @@
+{
+  "id": "member",
+  "label": "Member",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "firstname": {
+        "type": "Text",
+        "config": {
+          "label": "Firstname",
+          "placeholder": ""
+        }
+      },
+      "github": {
+        "type": "Link",
+        "config": {
+          "label": "Github",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "likes": {
+        "type": "Number",
+        "config": {
+          "label": "Likes",
+          "placeholder": ""
+        }
+      },
+      "url": {
+        "type": "Link",
+        "config": {
+          "label": "url",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "portret": {
+        "type": "Image",
+        "config": {
+          "label": "Portret",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,78 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Content for Member documents
+ */
+interface MemberDocumentData {
+  /**
+   * Firstname field in *Member*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.firstname
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  firstname: prismic.KeyTextField;
+
+  /**
+   * Github field in *Member*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.github
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  github: prismic.LinkField;
+
+  /**
+   * Likes field in *Member*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.likes
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  likes: prismic.NumberField;
+
+  /**
+   * url field in *Member*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField;
+
+  /**
+   * Portret field in *Member*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.portret
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  portret: prismic.ImageField<never>;
+}
+
+/**
+ * Member document from Prismic
+ *
+ * - **API ID**: `member`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type MemberDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<MemberDocumentData>, "member", Lang>;
+
 type PageDocumentDataSlicesSlice = never;
 
 /**
@@ -77,7 +149,46 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = PageDocument;
+/**
+ * Content for Squad documents
+ */
+interface SquadDocumentData {
+  /**
+   * Name field in *Squad*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squad.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Members field in *Squad*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squad.members
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  members: prismic.ContentRelationshipField<"member">;
+}
+
+/**
+ * Squad document from Prismic
+ *
+ * - **API ID**: `squad`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SquadDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<SquadDocumentData>, "squad", Lang>;
+
+export type AllDocumentTypes = MemberDocument | PageDocument | SquadDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -89,9 +200,13 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      MemberDocument,
+      MemberDocumentData,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
+      SquadDocument,
+      SquadDocumentData,
       AllDocumentTypes,
     };
   }
