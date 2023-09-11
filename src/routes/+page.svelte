@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import { SliceZone } from '@prismicio/svelte';
+	import { components } from '$lib/slices';
+
+	export let data
+	const { page } = data
+
+	console.log(page);
+</script>
+
+
+<h1>{ page.title }</h1>
+
+<SliceZone slices={page.slices} {components} />

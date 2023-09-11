@@ -1,0 +1,35 @@
+{
+  "id": "squad",
+  "label": "Squad",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "memberslist": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

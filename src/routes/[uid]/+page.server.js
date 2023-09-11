@@ -6,10 +6,7 @@ export const prerender = true;
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
 	const client = createClient();
-
 	const response = await client.getByUID('page', params.uid)
-
-	if (response) return response
-
+	// if (response) return { page: response.data }
 	error(404, 'Page not found')
 }
