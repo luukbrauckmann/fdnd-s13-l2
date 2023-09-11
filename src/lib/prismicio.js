@@ -15,10 +15,14 @@ export const repositoryName = config.repositoryName;
  */
 // TODO: Update the routes array to match your project's route structure.
 const routes = [
-	{
-		type: "page",
-		path: "/:uid",
-	},
+  {
+    type: "homepage",
+    path: "/",
+  },
+  {
+    type: "page",
+    path: "/:uid",
+  },
 ];
 
 /**
@@ -28,10 +32,10 @@ const routes = [
  * @param {prismic.ClientConfig} config - Configuration for the Prismic client.
  */
 export const createClient = (config = {}) => {
-	const client = prismic.createClient(repositoryName, {
-		routes,
-		...config,
-	});
+  const client = prismic.createClient(repositoryName, {
+    routes,
+    ...config,
+  });
 
-	return client;
+  return client;
 };

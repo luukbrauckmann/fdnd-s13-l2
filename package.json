@@ -6,19 +6,14 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
 		"slicemachine": "start-slicemachine"
 	},
 	"devDependencies": {
-		"@slicemachine/adapter-sveltekit": "^0.3.13",
+		"@slicemachine/adapter-sveltekit": "^0.3.14",
 		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/adapter-vercel": "^3.0.3",
 		"@sveltejs/kit": "^1.20.4",
-		"slice-machine-ui": "^1.11.0",
+		"slice-machine-ui": "^1.12.0",
 		"svelte": "^4.0.5",
-		"svelte-check": "^3.4.3",
-		"typescript": "^5.0.0",
 		"vite": "^4.4.2"
 	},
 	"type": "module",
