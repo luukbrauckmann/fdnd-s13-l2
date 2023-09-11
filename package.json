@@ -11,6 +11,7 @@
 	"devDependencies": {
 		"@slicemachine/adapter-sveltekit": "^0.3.14",
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-vercel": "^3.0.3",
 		"@sveltejs/kit": "^1.20.4",
 		"slice-machine-ui": "^1.12.0",
 		"svelte": "^4.0.5",
