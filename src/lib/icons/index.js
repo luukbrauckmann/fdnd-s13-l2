@@ -1,2 +1,7 @@
-export * as Github from "./Github.svelte";
-export * as Globe from "./Globe.svelte";
+import Github from "./Github.svelte";
+import Globe from "./Globe.svelte";
+
+export {
+	Github,
+	Globe
+}
