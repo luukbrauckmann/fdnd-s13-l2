@@ -4,8 +4,6 @@
 
 	export let data
 	const { page } = data
-
-	console.log(page);
 </script>
 
 <h1>{ page.title }</h1>

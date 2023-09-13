@@ -20,6 +20,9 @@
           "choices": {
             "memberslist": {
               "type": "SharedSlice"
+            },
+            "squadlist": {
+              "type": "SharedSlice"
             }
           }
         }
