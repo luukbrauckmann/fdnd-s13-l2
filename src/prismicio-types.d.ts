@@ -86,15 +86,26 @@ export type HomepageDocument<Lang extends string = string> =
  */
 interface MemberDocumentData {
   /**
-   * Squad field in *Member*
+   * Likes field in *Member*
    *
-   * - **Field Type**: Content Relationship
+   * - **Field Type**: Number
    * - **Placeholder**: *None*
-   * - **API ID Path**: member.squad
+   * - **API ID Path**: member.likes
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **Documentation**: https://prismic.io/docs/field#number
    */
-  squad: prismic.ContentRelationshipField;
+  likes: prismic.NumberField;
+
+  /**
+   * Portret field in *Member*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.portret
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  portret: prismic.ImageField<never>;
 
   /**
    * Firstname field in *Member*
@@ -108,28 +119,6 @@ interface MemberDocumentData {
   firstname: prismic.KeyTextField;
 
   /**
-   * Github field in *Member*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: member.github
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  github: prismic.LinkField;
-
-  /**
-   * Likes field in *Member*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: member.likes
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  likes: prismic.NumberField;
-
-  /**
    * Website field in *Member*
    *
    * - **Field Type**: Link
@@ -141,15 +130,15 @@ interface MemberDocumentData {
   website: prismic.LinkField;
 
   /**
-   * Portret field in *Member*
+   * Squad field in *Member*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: member.portret
+   * - **API ID Path**: member.squad
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  portret: prismic.ImageField<never>;
+  squad: prismic.ContentRelationshipField;
 }
 
 /**

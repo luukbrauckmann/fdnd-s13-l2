@@ -12,32 +12,25 @@
         },
         "type": "UID"
       },
-      "squad": {
-        "type": "Link",
+      "likes": {
+        "type": "Number",
         "config": {
-          "label": "Squad",
-          "select": "document"
+          "label": "Likes",
+          "placeholder": ""
+        }
+      },
+      "portret": {
+        "type": "Image",
+        "config": {
+          "label": "Portret",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "firstname": {
         "type": "Text",
         "config": {
           "label": "Firstname",
-          "placeholder": ""
-        }
-      },
-      "github": {
-        "type": "Link",
-        "config": {
-          "label": "Github",
-          "placeholder": "",
-          "select": null
-        }
-      },
-      "likes": {
-        "type": "Number",
-        "config": {
-          "label": "Likes",
           "placeholder": ""
         }
       },
@@ -49,12 +42,11 @@
           "select": null
         }
       },
-      "portret": {
-        "type": "Image",
+      "squad": {
+        "type": "Link",
         "config": {
-          "label": "Portret",
-          "constraint": {},
-          "thumbnails": []
+          "label": "Squad",
+          "select": "document"
         }
       }
     }
