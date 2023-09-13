@@ -13,7 +13,7 @@
 		{#each slice.items as { member } }
 			<li>
 				<article>
-					<img src="{ member.data.website.url }/favicon.ico" alt="Icon">
+					<img src="{ member.data?.github.url }.png" alt="Icon">
 					<h3>{member.data.firstname}</h3>
 
 

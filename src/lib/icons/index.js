@@ -1,7 +1,9 @@
 import Github from "./Github.svelte";
 import Globe from "./Globe.svelte";
 
-export {
-	Github,
-	Globe
+export const icons = {
+	github: Github,
+	globe: Globe
 }
+
+export { default as Icon } from "./Icon.svelte";

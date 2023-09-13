@@ -97,17 +97,6 @@ interface MemberDocumentData {
   likes: prismic.NumberField;
 
   /**
-   * Portret field in *Member*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: member.portret
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  portret: prismic.ImageField<never>;
-
-  /**
    * Firstname field in *Member*
    *
    * - **Field Type**: Text
@@ -128,6 +117,17 @@ interface MemberDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   website: prismic.LinkField;
+
+  /**
+   * Github field in *Member*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.github
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  github: prismic.LinkField;
 
   /**
    * Squad field in *Member*

@@ -19,14 +19,6 @@
           "placeholder": ""
         }
       },
-      "portret": {
-        "type": "Image",
-        "config": {
-          "label": "Portret",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "firstname": {
         "type": "Text",
         "config": {
@@ -38,6 +30,14 @@
         "type": "Link",
         "config": {
           "label": "Website",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "github": {
+        "type": "Link",
+        "config": {
+          "label": "Github",
           "placeholder": "",
           "select": null
         }
