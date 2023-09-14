@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "Playfair Display";
+	src: url("/fonts/Playfair Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+	font-weight: 400 900;
+	font-stretch: 25% 151%;
+	font-display: swap;
+}
+
+:root {
+	--font: "Playfair Display";
+	--spacing: .5rem;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font);
+	font-variation-settings: "wght" 400;
+}
