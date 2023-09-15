@@ -9,16 +9,26 @@
 >
   <h2>Members</h2>
 
-	<ul>
-		{#each slice.items as { member } }
-			<li>
-				<article>
-					<img src="{ member.data?.github.url }.png" alt="Icon">
-					<h3>{member.data.firstname}</h3>
+	{#each slice.items as { member } }
+		<article>
+			<div>
+				<h3>{member.data.firstname}</h3>
 
-
+				<div>
+					Extra info
 					<pre>{ JSON.stringify(member.data, 0, 2) }</pre>
-				</article>
-			</li>
-		{/each}
+				</div>
+			</div>
+
+			<img src="{ member.data?.github.url }.png" alt="">
+		</article>
+	{/each}
 </section>
+
+<style>
+	article {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+</style>

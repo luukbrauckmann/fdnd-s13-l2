@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomepageDocumentDataSlicesSlice = MemberslistSlice | SquadlistSlice;
+type HomepageDocumentDataSlicesSlice = MemberslistSlice;
 
 /**
  * Content for Homepage documents
@@ -318,51 +318,6 @@ export type MemberslistSlice = prismic.SharedSlice<
   MemberslistSliceVariation
 >;
 
-/**
- * Primary content in *Squadslist → Items*
- */
-export interface SquadlistSliceDefaultItem {
-  /**
-   * Squad field in *Squadslist → Items*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: squadlist.items[].squad
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  squad: prismic.ContentRelationshipField<"squad">;
-}
-
-/**
- * Default variation for Squadslist Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SquadlistSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Record<string, never>,
-  Simplify<SquadlistSliceDefaultItem>
->;
-
-/**
- * Slice variation for *Squadslist*
- */
-type SquadlistSliceVariation = SquadlistSliceDefault;
-
-/**
- * Squadslist Shared Slice
- *
- * - **API ID**: `squadlist`
- * - **Description**: Squadlist
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SquadlistSlice = prismic.SharedSlice<
-  "squadlist",
-  SquadlistSliceVariation
->;
-
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -389,10 +344,6 @@ declare module "@prismicio/client" {
       MemberslistSliceDefaultItem,
       MemberslistSliceVariation,
       MemberslistSliceDefault,
-      SquadlistSlice,
-      SquadlistSliceDefaultItem,
-      SquadlistSliceVariation,
-      SquadlistSliceDefault,
     };
   }
 }

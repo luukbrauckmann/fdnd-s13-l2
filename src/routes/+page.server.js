@@ -3,7 +3,7 @@ import { createClient } from '$lib/prismicio'
 
 export async function load({ fetch, request }) {
 	const client = createClient({ fetch, request })
-	const response = await client.getSingle('homepage', { fetchLinks: ['member.uid', 'member.firstname', 'member.website', 'member.github'] })
+	const response = await client.getSingle('homepage', { fetchLinks: ['squad.name', 'squad.members', 'member.uid', 'member.firstname', 'member.website', 'member.github'] })
 
 	if (response) {
 		return { page: response.data }
