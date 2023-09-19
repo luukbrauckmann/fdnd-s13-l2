@@ -7,7 +7,8 @@
   data-slice-type={slice.slice_type}
   data-slice-variation={slice.variation}
 >
-  <h2>Members</h2>
+<pre>{ JSON.stringify(slice, 0, 2) }</pre>
+  <!-- <h2>Members</h2>
 
 	{#each slice.items as { member } }
 		<article>
@@ -22,7 +23,7 @@
 
 			<img src="{ member.data?.github.url }.png" alt="">
 		</article>
-	{/each}
+	{/each} -->
 </section>
 
 <style>

@@ -18,6 +18,14 @@ const routes = [
 	{
 		type: "homepage",
 		path: "/",
+	},
+	{
+		type: "squadpage",
+		path: "/:uid",
+	},
+	{
+		type: "memberpage",
+		path: "/:uid/:uid",
 	}
 ];
 

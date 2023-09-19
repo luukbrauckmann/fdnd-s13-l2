@@ -1,8 +1,8 @@
 {
-  "id": "memberslist",
+  "id": "squadlist",
   "type": "SharedSlice",
-  "name": "Memberslist",
-  "description": "Memberslist",
+  "name": "Squads",
+  "description": "Squadlist",
   "variations": [
     {
       "id": "default",
@@ -13,13 +13,13 @@
       "imageUrl": "",
       "primary": {},
       "items": {
-        "member": {
+        "squad": {
           "type": "Link",
           "config": {
-            "label": "Member",
+            "label": "Squad",
             "select": "document",
             "customtypes": [
-              "member"
+              "squad"
             ]
           }
         }

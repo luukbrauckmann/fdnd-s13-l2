@@ -1,6 +1,6 @@
 {
-  "id": "homepage",
-  "label": "Homepage",
+  "id": "squadpage",
+  "label": "Squadpage",
   "format": "page",
   "repeatable": false,
   "status": true,
@@ -11,7 +11,10 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "squadlist": {
+            "squad": {
+              "type": "SharedSlice"
+            },
+            "memberslist": {
               "type": "SharedSlice"
             }
           }
