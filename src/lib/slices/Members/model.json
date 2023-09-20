@@ -17,8 +17,7 @@
           "type": "Link",
           "config": {
             "label": "Member",
-            "select": "document",
-            "customtypes": ["member"]
+            "select": "document"
           }
         }
       }
