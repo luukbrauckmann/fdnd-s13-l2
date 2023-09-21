@@ -14,11 +14,11 @@
 
 <h2 id="beschrijving">ℹ️ Beschrijving</h2>
 
->
+Peek A Boo is de website om te weten te komen wie onderdeel waren van FDND. Hier kun je de links naar hun visitekaartjes vinden, zodat je in contact kan komen met deze geweldige Frontenders.
 
 <h2 id="gebruik">🖥️ Gebruik</h2>
 
->
+De website is bedoeld voor bezoekers & fdnd'ers. Deze gebruikers kunnen de squads & members doorkijken om de links naar hun visitekaartjes te vinden.
 
 <h2 id="kenmerken">✨ Kenmerken</h2>
 
