@@ -22,11 +22,11 @@
 
 <h2 id="kenmerken">✨ Kenmerken</h2>
 
->
+Dit project is gemaakt in Sveltekit. De content wordt opgeslagen en uitgelezen in Prismicio. De code wordt opgeslagen in GitHub. De website staat live in Vercel. Vercel heeft een koppeling met de GitHub Repo en genereerd bij elke push op de main een nieuwe applicatie.
 
 <h2 id="installatie">📥 Installatie</h2>
 
-Wil je deze applicatie lokaal starten? Volg dan de volgende stappen. Let op! Je moet NodeJS geïnstalleerd zijn om npm commando's uit te kunnen voeren. In het kopje bronnen staat een link naar de NodeJS website.
+Wil je deze applicatie lokaal starten? Volg dan de volgende stappen. Let op! NodeJS geïnstalleerd zijn om npm commando's uit te kunnen voeren. In het kopje bronnen staat een link naar de NodeJS website.
 
 1. Open je terminal. Zorg dat je in het pad zit van het project.
 ```bash
